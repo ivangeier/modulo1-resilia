@@ -1,0 +1,62 @@
+/* ===== PLAY GAME - Tela inicial ===== */
+
+#playGame {
+  width: 20rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--black);
+
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 0.4rem solid var(--white);
+  border-radius: 1rem;
+  background-color: var(--yellow);
+}
+
+#playGame:hover {
+  color: var(--white);
+  border-color: var(--cian);
+}
+
+/* ===== CHARACTERS SCREEN ===== */
+
+.container {
+  width: 70%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  width: 25rem;
+  padding: 2rem;
+  background-color: var(--yellow);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.card .avatar {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.card .card-description {
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 1.4rem;
+}
+
+.card:hover {
+  background-color: var(--cian);
+  margin-top: -2rem;
+  cursor: pointer;
+}
+
+.card:active {
+  background-color: var(--greenyellow);
+}
