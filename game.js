@@ -14,6 +14,11 @@ restarGame.addEventListener('click', function() {
     handleAnswer(0);
 })
 
+function startGame(gamePlay) {
+    character = gamePlay;
+    showQuestion();
+}
+
 function resetGame() {
     character = null;
     step = 0;
@@ -21,16 +26,11 @@ function resetGame() {
     window.location.replace('../characters.html');
 }
 
-function startGame(gamePlay) {
-    character = gamePlay;
-    showQuestion();
-}
-
 function showQuestion() {
     let {question, option1, option2, isEnd} = character[step];
     situation.innerHTML = question;
-    answer1.innerHTML = option1;
-    answer2.innerHTML = option2;
+    answer1.innerHTML = `1 - ${option1}`;
+    answer2.innerHTML = `2 - ${option2}`;
     quality.innerHTML = `${score}%`;
     progressBar.value = score;
 
@@ -43,7 +43,6 @@ function showQuestion() {
         answer2.hidden = true;
         restarGame.hidden = false;
         changeImage();
-
     }    
 }
 
@@ -56,17 +55,12 @@ function changeImage() {
 }
 
 function makePrompt () {
-    let {option1, option2} = character[step];
     let userInput = '';
 
     while (userInput != '1' && userInput != '2' && userInput != '0') {
-    userInput = prompt(`Escolha uma das alternativas:
-    
-        1 - ${option1}
-        2 - ${option2}
-        
-        0 - Reiniciar game`);
-    }
+    userInput = prompt(`Qual alternativa você escolhe? Digite apenas o número da opção.
+(Digite 0 para reiniciar o jogo)`);
+    }     
     handleAnswer(userInput);
 }
 

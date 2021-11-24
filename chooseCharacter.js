@@ -1,11 +1,9 @@
 function askCharacter() {
-    let inputCharacter = prompt(`Escolha o seu personagem para jogar
+    let inputCharacter = prompt(`Insira o número correspondente ao personagem que deseja jogar:
                                     
     1 - Ivanzito
     2 - Vuealeza
-    3 - Javirux
-                                    
-    Insira o número correspondente ao personagem:`) 
+    3 - Javirux`) 
     characterIsValid(inputCharacter);
 }
 
@@ -20,7 +18,9 @@ function characterIsValid(character) {
 function startGame(character) {
     if (character == 1 ) {
         window.location.replace('./ivanzito/ivanzito.html');
-    } else if (character == 3) {
+    } else if (character == 2) {
+        window.location.replace('./vuealeza/vuealeza.html');
+    } else {
         window.location.replace('./javirux/javirux.html');
     }
 }
