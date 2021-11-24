@@ -1,7 +1,3 @@
-window.onload = function() {
-    askCharacter();   
-}
-
 function askCharacter() {
     let inputCharacter = prompt(`Escolha o seu personagem para jogar
                                     
@@ -10,10 +6,10 @@ function askCharacter() {
     3 - Javirux
                                     
     Insira o número correspondente ao personagem:`) 
-    characterIsvalid(inputCharacter);
+    characterIsValid(inputCharacter);
 }
 
-function characterIsvalid(character) {
+function characterIsValid(character) {
     if (character == 1 || character == 2 || character == 3) {
         startGame(character);
     } else {
@@ -28,3 +24,10 @@ function startGame(character) {
         window.location.replace('./javirux/javirux.html');
     }
 }
+
+setTimeout(function() {
+    askCharacter();   
+}, 1000)
+
+// window.onload = function() {
+// }
