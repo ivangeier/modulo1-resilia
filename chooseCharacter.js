@@ -24,7 +24,7 @@ function characterIsvalid(character) {
 function startGame(character) {
     if (character == 1 ) {
         window.location.replace('./ivanzito/ivanzito.html');
-    } else if (character == 2) {
+    } else if (character == 3) {
         window.location.replace('./javirux/javirux.html');
     }
 }
