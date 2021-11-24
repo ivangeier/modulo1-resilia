@@ -27,7 +27,7 @@ function startGame(gamePlay) {
 }
 
 function showQuestion() {
-    let {question, option1, option2, isEnd} = ivanzito[step];
+    let {question, option1, option2, isEnd} = character[step];
     situation.innerHTML = question;
     answer1.innerHTML = option1;
     answer2.innerHTML = option2;
@@ -56,7 +56,7 @@ function changeImage() {
 }
 
 function makePrompt () {
-    let {option1, option2} = ivanzito[step];
+    let {option1, option2} = character[step];
     let userInput = '';
 
     while (userInput != '1' && userInput != '2' && userInput != '0') {
@@ -80,11 +80,11 @@ function handleAnswer(answerChoosed) {
 
 function nextStep(id) {
     if (id == '1') {
-        score += ivanzito[step].points1
-        step = ivanzito[step].nextStep1;
+        score += character[step].points1
+        step = character[step].nextStep1;
     } else {
-        score += ivanzito[step].points2
-        step = ivanzito[step].nextStep2;
+        score += character[step].points2
+        step = character[step].nextStep2;
     }
     showQuestion();
 }
